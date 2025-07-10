@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      const scr = "https://script.google.com/macros/s/AKfycbxaaE6-gtN3QgmKwtsFyv4-L_ckqtDtOoVSd9q9DEK6YmdrWfFxzuapf5qfcxyejHPqlw/exec";
+      const scrVer = "g4v4.1b";
+      
+      const params = new URLSearchParams(window.location.search);
+      const unit = params.get("un");
+      const addr = params.get("ad");
+
+      let indexId = "";
+      switch(addr) {
+        case "GFa":
+          indexId = "1vAoLaLHAQbARa_rpMx2sUzaYdDs2oBeqiu8cOsb35qk";
+          break;
+        case "GSp":
+          indexId = "1vAoLaLHAQbARa_rpMx2sUzaYdDs2oBeqiu8cOsb35qk";
+          break;
+        case "GSu":
+          indexId = "1vAoLaLHAQbARa_rpMx2sUzaYdDs2oBeqiu8cOsb35qk";
+          break;
+        case "LFa":
+          indexId = "1vAoLaLHAQbARa_rpMx2sUzaYdDs2oBeqiu8cOsb35qk";
+          break;
+        case "LSp":
+          indexId = "1vAoLaLHAQbARa_rpMx2sUzaYdDs2oBeqiu8cOsb35qk";
+          break;
+        case "LSu":
+          indexId = "1vAoLaLHAQbARa_rpMx2sUzaYdDs2oBeqiu8cOsb35qk";
+          break;
+        default:
+          indexId = false;
+      }
+
+      let url = "#";
+      if (unit && indexId) {
+        url = `${scr}?un=${encodeURIComponent(unit)}&in=${encodeURIComponent(indexId)}`;
+        window.location.replace(url);
+      }
+      window.redirectUrl = url;
+    </script>
+  </head>
+  <body>
+    <p>Loading the <a id="redirectLink" href="#">Project Manager</a>...</p>
+    <script>
+      document.getElementById("redirectLink").href = window.redirectUrl;
+    </script>
+  </body>
+</html>
