@@ -41,12 +41,14 @@
         window.location.replace(url);
       }
       window.redirectUrl = url;
+      window.versionNumber = scrVer;
     </script>
   </head>
   <body>
     <p>Loading the <a id="redirectLink" href="#">Project Manager</a>...</p>
     <script>
       document.getElementById("redirectLink").href = window.redirectUrl;
+      document.getElementById("versionDisplay").textContent = window.versionNumber;
     </script>
   </body>
 </html>
